@@ -1,11 +1,63 @@
 {% extends 'layout.html' %}
 
-
 {% block title %}
     Inicio
 {% endblock %}
 
-
 {% block content %}
-<h1>Contenido de los integrantes</h1>
+
+<style>
+    .styled-table {
+        width: 80%;
+        margin: auto;
+        border-collapse: collapse;
+        text-align: center;
+        margin-top: 20px;
+    }
+    
+    .styled-table th, .styled-table td {
+        border: 1px solid black;
+        padding: 10px;
+    }
+    
+    .styled-table th {
+        background-color: #8ADFE0;
+    }
+    
+    /* Agrega estilos para filas específicas */
+    .row1 {
+        background-color: #AABAED; /* Color claro para la primera fila */
+    }
+    
+    .row2 {
+        background-color: #EDF08B; /* Color claro para la segunda fila */
+    }
+    
+    .row3 {
+        background-color: #C5C5B4; /* Color claro para la tercera fila */
+    }
+</style>
+
+<table class="styled-table">
+    <thead>
+        <tr>
+            <th>NOMBRES</th>
+            <th>APELLIDOS</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr class="row1">
+            <td>Nombre1</td>
+            <td>Apellido1</td>
+        </tr>
+        <tr class="row2">
+            <td>Nombre2</td>
+            <td>Apellido2</td>
+        </tr>
+        <tr class="row3">
+            <td>Nombre3</td>
+            <td>Apellido3</td>
+        </tr>
+    </tbody>
+</table>
 {% endblock %}
