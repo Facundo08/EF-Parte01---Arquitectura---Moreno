@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang= "es">
+    <head>
+        <meta charset="utf-8" />
+        <title>
+            {% block title  %}
+
+            {% endblock %} 
+            | Raúl Andersson López Puris
+        </title>
+        {% load static %}
+        <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}"/>
+    </head>
+    <body>
+        <header>
+            <div id="logotipo">
+                <img src="{% static 'images/LogoUntels.png' %}" />
+                <h1>Examen Final (LP3)</h1>
+            </div>
+        </header>
+        <nav>
+            <ul>
+                <li>
+                    <a href="{% url 'index' %}">Inicio</a>
+                </li>
+                <li>
+                    <a href="{% url 'listar_docentes' %}">Docentes</a>
+                </li>
+                <li>
+                    <a href="{% url 'agregar_docente' %}">Registrar Docente</a>
+                </li>
+                <li>
+                    <a href="{% url 'listar_cursos' %}">Cursos</a>
+                </li>
+                <li>
+                    <a href="{% url 'agregar_curso' %}">Crear curso</a>
+                </li>
+                <li>
+                    <a href="{% url 'integrantes' %}">Integrantes</a>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="barra">
+            <span class="esquina-izquierda"></span>
+            <span class="relleno-barra"></span>
+            <span class="esquina-derecha"></span>
+        </div>
+
+        <div id="content">
+            <div class="box">
+                {% block content %}
+
+                {% endblock %}
+            </div>
+        </div>
+        
+        <footer>
+            UNTELS - Lenguaje de Programación III &copy;
+        </footer>
+    </body>
+</html>
